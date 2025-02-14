@@ -1,0 +1,179 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte clean */
+    line-height: 1.6;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a2e); /* Degradê preto/azul */
+    color: #e0e0e0; /* Cor do texto principal */
+    padding: 20px;
+    min-height: 100vh; /* Garante que o fundo cubra toda a tela */
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgba(30, 30, 46, 0.8); /* Azul escuro com transparência */
+    color: #64b5f6; /* Azul claro para o texto */
+    padding: 20px 0;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #64b5f6; /* Azul claro para os links */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #e0e0e0; /* Cinza claro ao passar o mouse */
+}
+
+/* Seções */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(30, 30, 46, 0.8); /* Azul escuro com transparência */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 900px;
+}
+
+section:hover {
+    transform: translateY(-5px); /* Levanta a seção ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2, h3 {
+    color: #64b5f6; /* Azul claro para títulos */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(30, 30, 46, 0.8); /* Azul escuro com transparência */
+    color: #64b5f6; /* Azul claro para o texto */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+}
+
+/* Botão "Voltar ao topo" */
+#btnTopo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    background-color: #64b5f6; /* Azul claro */
+    color: #0a0a0a; /* Preto */
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+/* Estilização do conteúdo sobre */
+.sobre-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sobre-texto {
+    flex: 1;
+    text-align: left;
+}
+
+.foto-container {
+    flex-shrink: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.foto-circular {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #333;
+    transition: transform 0.3s ease-in-out;
+}
+
+.foto-circular:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foto-circular {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+#btnTopo:hover {
+    background-color: #e0e0e0;
+}
+
+.tech-stack {
+    display: inline-block;
+    background-color: #64b5f6; /* Azul claro */
+    color: #0a0a0a; /* Texto escuro */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 3px;
+}
+
+.empresa:hover {
+    transform: translateY(-5px); /* Levanta a seção ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.empresa {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(30, 30, 46, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tech {
+    background-color: #64b5f6;
+    color: #0a0a0a;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 3px;
+    display: inline-block;
+}
